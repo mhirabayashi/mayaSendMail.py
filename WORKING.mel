@@ -8,7 +8,7 @@ global proc makeMailNode(){
         delete "mailNode";
         if ($index != 0)  {scriptJob -f -k $index;} 
         }
-    createNode unknown -n "mailNode";
+    createNode network -n "mailNode";
     for ($string in {"date", "userName", "fullName", "emailAddress", "dailies", "textField", 
     "htmlField", "htmlString", "index", "toField", "fromField", "subField"}) 
     {addAttr -ln $string -dt "string" -keyable true;}
